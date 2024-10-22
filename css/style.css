@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#sidebar {
+    transition: all .5s;
+    min-width: 50px;
+    z-index: 2;
+
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    transition: width .6s;
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+
+
+#sidebar.open-sidebar .item-description {
+    width: 300px;
+}
+
+#open_btn_icon {
+    transition: transform .3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(90deg);
+}
+
+
+
+#open_btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+#login input {
+    background-color: transparent !important;
+}
+
+form input {
+    margin-bottom: 10px;
+}
+
+form img {
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+form input,
+form select [type="submit"] {
+    margin-top: 10px;
+
+}
+
+.row {
+    padding-bottom: 50px;
+}
+
+.container h1 {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+card {
+    display: flex;
+    margin-top: 40px;
+    padding: 5px;
+    height: 95%;
+    width: 300px;
+}
+
+#cart {
+    overflow-y: scroll;
+    width: 50%;
+    height: 80%;
+}
+
+
+.card-btn {
+    width: 96%;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.textos {
+    flex-direction: column;
+    margin-top: 30px;
+    font-weight: bold;
+    margin: 1px;
+    padding: 1px;
+}
+
+.descricao {
+    font-weight: lighter;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.nome,
+.valor {
+    margin: 0;
+}
+
+
+form a {
+    margin-bottom: 10px;
+}
+
+.alert {
+    margin-top: 30px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.formularioPesquisa input,
+.formularioPesquisa input[type="submit"] {
+    margin: 0;
+}
+
+.formularioPesquisa {
+    margin: 0;
+}
+
+.nonfinded {
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 450px) {
+    #cart {
+        overflow-y: scroll;
+        width: 95%;
+        height: 90%;
+    }
+
+    #sidebar.open-sidebar {
+        min-width: 80%;
+    }
+
+    #sidebar {
+        transition: all .5s;
+        width: 5px;
+        background-color: white;
+        box-shadow: none;
+    }
+}
